@@ -7,6 +7,7 @@ var wrongGuess = [];
 var blanks = 0;
 
 var wins = 0;
+var losses = 0;
 var guessLeft = 15;
 
 function startup() {
@@ -50,7 +51,9 @@ function gameRun() {
     reset();
     document.getElementById("win").innerHTML = " " + wins;
   } else if (guessLeft === 0) {
+    losses++;
     reset();
+    document.getElementById("wrong").innerHTML = " " + losses;
   }
   document.getElementById("yourguess").innerHTML =
     "  " + blanksAndCorrect.join(" ");
@@ -60,15 +63,9 @@ function gameRun() {
 startup();
 
 document.onkeyup = function(event) {
-  var guesses = String.fromCharCode(event.keyCode)();
-  //check to see if guess entered matches value of random word
+  var guesses = String.fromCharCode(event.keyCode).toLowerCase();
   checkLetters(guesses);
-  //process wins/loss
   gameRun();
-  //store player guess in console for reference
-  
-
-  //display/store incorrect letters on screen
   document.getElementById("guessed").innerHTML = "  " + wrongGuess.join(" ");
 };
 
@@ -78,4 +75,3 @@ console.log(computerWord);
 console.log(letterOfWord);
 console.log(blanks);
 console.log(blanksAndCorrect);
-console.log(guesses);
