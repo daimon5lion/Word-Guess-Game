@@ -12,8 +12,8 @@ var guessLeft = 15;
 
 function startup() {
   computerWord = games[Math.floor(Math.random() * games.length)];
-  letterOfWord = computerWord.split("");
-  blanks = letterOfWord.length;
+  lettersOfWord = computerWord.split("");
+  blanks = lettersOfWord.length;
   for (var i = 0; i < blanks; i++) {
     blanksAndCorrect.push("_");
   }
@@ -40,7 +40,7 @@ function checkLetters(letter) {
       }
     }
   } else {
-    wrongGuess.push(letter);
+    wrongGuess.push(letter.toUpperCase());
     guessLeft--;
   }
 }
