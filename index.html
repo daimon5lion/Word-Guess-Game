@@ -6,12 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
     <link
       href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Spicy+Rice|Anton"
       rel="stylesheet"
@@ -20,24 +19,49 @@
   </head>
 
   <body style="background-image: url(assets/images/sports.png)">
-    <div
-      class="jumbotron jumbotron-fluid"
-      style="background-image: url(assets/images/obackground.png)"
-    >
-      <div class="container">
-        <h1
-          class="display-4"
-          style="font-family:anton; color: rgb(96, 27, 131)"
-        >
-          Olympic Games
-        </h1>
-        <p
-          class="lead"
-          style="font-family:Spicy Rice; font-size: 25px; color: rgb(30, 99, 145)"
-        >
-          <br />Have fun with Olympic Games! Type anything you know!
-        </p>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Lei Chen</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://daimon5lion.github.io/Bootstrap-Portfolio/index.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://daimon5lion.github.io/Bootstrap-Portfolio/portfolio.html"
+                >Portfolio <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://daimon5lion.github.io/Bootstrap-Portfolio/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/obackground.png)">
+              <h1 class="display-4"style="font-family:anton; color: rgb(96, 27, 131)">Olympic Games</h1>
+              <p class="lead" style="font-family:Spicy Rice; font-size: 25px; color: rgb(30, 99, 145)">
+              <br />Have fun with Olympic Games! Type anything you know!
+              </p>
+            </div>
+          </div>
+        </div>
     </div>
 
     <div class="container">
@@ -99,6 +123,8 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 
   </html>
