@@ -1,4 +1,17 @@
-var games = ["soccer", "skating", "basketball"];
+var games = [
+  "soccer",
+  "skating",
+  "basketball",
+  "fencing",
+  "wrestling",
+  "swimming",
+  "icehockey",
+  "tennis",
+  "volleyball",
+  "diving",
+  "waterpolo",
+  "archery"
+];
 
 var computerWord = "";
 var lettersOfWord = [];
@@ -9,6 +22,9 @@ var blanks = 0;
 var wins = 0;
 var losses = 0;
 var guessLeft = 15;
+
+var c = document.getElementById("champion");
+var s = document.getElementById("sad");
 
 function startup() {
   computerWord = games[Math.floor(Math.random() * games.length)];
@@ -48,12 +64,16 @@ function checkLetters(letter) {
 function gameRun() {
   if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
     wins++;
+    document.getElementById("image").src = "./assets/images/gmedal.jpg";
+    c.play();
     reset();
     document.getElementById("win").innerHTML = " " + wins;
   } else if (guessLeft === 0) {
     losses++;
-    reset();
+    document.getElementById("image").src = "./assets/images/tagain.jpg";
     document.getElementById("wrong").innerHTML = " " + losses;
+    s.play();
+    reset();
   }
   document.getElementById("yourguess").innerHTML =
     "  " + blanksAndCorrect.join(" ");
