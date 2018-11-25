@@ -28,6 +28,7 @@ var s = document.getElementById("sad");
 
 function startup() {
   computerWord = games[Math.floor(Math.random() * games.length)];
+  console.log(computerWord);
   lettersOfWord = computerWord.split("");
   blanks = lettersOfWord.length;
   for (var i = 0; i < blanks; i++) {
